@@ -1,9 +1,9 @@
-# AEM Guides - WKND SPA Project
+# AEM Guides - DataArt POC SPA Project
 
 This is the code companion for a series of tutorials designed for developers new to the **SPA Editor** feature in Adobe Experience Manager (AEM). There are two parallel versions of the tutorial:
 
-* [Create your first Angular SPA in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn_en/getting-started-with-aem-headless/spa-editor/angular/overview.html)
-* [Create your first React SPA in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
+- [Create your first Angular SPA in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn_en/getting-started-with-aem-headless/spa-editor/angular/overview.html)
+- [Create your first React SPA in AEM](https://experienceleague.adobe.com/docs/experience-manager-learn/getting-started-with-aem-headless/spa-editor/react/overview.html)
 
 The starter and solution branches in this repository correspond to **Angular** and **React** versions of the tutorial.
 
@@ -11,11 +11,11 @@ The starter and solution branches in this repository correspond to **Angular** a
 
 The main parts of the project are:
 
-* **core**: Java bundle containing all core functionality like OSGi services, listeners or schedulers, as well as component-related Java code such as servlets or request filters.
-* **ui.apps**: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, templates and runmode specific configs
-* **ui.content**: contains sample content using the components from the ui.apps
-* **ui.tests**: Java bundle containing JUnit tests that are executed server-side. This bundle is not to be deployed onto production.
-* **ui.frontend**: an optional dedicated front-end build mechanism. Depending on the branch this will be either the **React** or **Angular** source code.
+- **core**: Java bundle containing all core functionality like OSGi services, listeners or schedulers, as well as component-related Java code such as servlets or request filters.
+- **ui.apps**: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, templates and runmode specific configs
+- **ui.content**: contains sample content using the components from the ui.apps
+- **ui.tests**: Java bundle containing JUnit tests that are executed server-side. This bundle is not to be deployed onto production.
+- **ui.frontend**: an optional dedicated front-end build mechanism. Depending on the branch this will be either the **React** or **Angular** source code.
 
 ## How to build
 

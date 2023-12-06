@@ -4,6 +4,6 @@ import com.adobe.cq.export.json.ComponentExporter;
 
 public interface DataArt extends ComponentExporter {
 
-    public String getMessage();
+    public Number getLimit();
 
 }

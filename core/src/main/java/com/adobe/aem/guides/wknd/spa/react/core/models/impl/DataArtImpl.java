@@ -5,7 +5,6 @@ import org.apache.sling.models.annotations.injectorspecific.ValueMapValue;
 import com.adobe.cq.export.json.ComponentExporter;
 import com.adobe.cq.export.json.ExporterConstants;
 
-import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.api.SlingHttpServletRequest;
 import com.adobe.aem.guides.wknd.spa.react.core.models.DataArt;
 
@@ -15,13 +14,13 @@ import com.adobe.aem.guides.wknd.spa.react.core.models.DataArt;
 public class DataArtImpl implements DataArt {
 
     @ValueMapValue
-    private String message;
+    private Number limit;
 
     static final String RESOURCE_TYPE = "wknd-spa-react/components/dataart";
 
     @Override
-    public String getMessage() {
-        return StringUtils.isNotBlank(message) ? message.toUpperCase() : null;
+    public Number getLimit() {
+        return limit;
     }
 
     @Override

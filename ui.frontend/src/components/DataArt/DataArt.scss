@@ -1,0 +1,12 @@
+@import '../../styles/variables';
+
+.dataArt {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+
+    &__image {
+        display: block;
+        width: 100%;
+    }
+}
