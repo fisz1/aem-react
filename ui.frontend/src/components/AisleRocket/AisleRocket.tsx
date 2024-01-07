@@ -58,4 +58,7 @@ const AisleRocket = ({ limit = 5 }: AisleRocketProps) => {
   );
 };
 
-MapTo("wknd-spa-react/components/dataart")(AisleRocket, AisleRocketEditConfig);
+MapTo("wknd-spa-react/components/aislerocket")(
+  AisleRocket,
+  AisleRocketEditConfig
+);

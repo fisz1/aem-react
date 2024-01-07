@@ -14,7 +14,7 @@
             "designPath": "/libs/settings/wcm/designs/default",
             "templateName": "spa-page-template",
             "cssClassNames": "spa page basicpage",
-            "title": "DataArt POC SPA Project",
+            "title": "AisleRocket POC SPA Project",
             "lastModifiedDate": 1588717986180,
             ":items": {
                 "root": {

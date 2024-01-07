@@ -6,7 +6,7 @@
         cq:lastModifiedBy="admin"
         cq:template="/conf/wknd-spa-react/settings/wcm/templates/spa-page-template"
         jcr:primaryType="cq:PageContent"
-        jcr:title="DataArt POC SPA Project"
+        jcr:title="AisleRocket POC SPA Project"
         sling:resourceType="wknd-spa-react/components/page">
         <root
             jcr:primaryType="nt:unstructured"

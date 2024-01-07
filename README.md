@@ -1,4 +1,4 @@
-# AEM Guides - DataArt POC SPA Project
+# AEM Guides - AisleRocket POC SPA Project
 
 This is the code companion for a series of tutorials designed for developers new to the **SPA Editor** feature in Adobe Experience Manager (AEM). There are two parallel versions of the tutorial:
 
