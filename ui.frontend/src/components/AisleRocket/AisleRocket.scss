@@ -4,7 +4,9 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-    background: red;
+    background: rgba($white, 0.3);
+    border: 1px solid $white;
+    padding: 20px;
 
     &__image {
         display: block;

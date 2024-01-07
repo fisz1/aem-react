@@ -42,7 +42,7 @@ const AisleRocket = ({ limit = 5 }: AisleRocketProps) => {
   }, [limit]);
 
   return (
-    <div className="aisleRocket">
+    <div className="aisleRocket" data-testId="AisleRocket">
       {isLoading && <div className="aisleRocket__loading">Loading...</div>}
       {images &&
         images.map((image: any) => (
