@@ -4,6 +4,6 @@ import com.adobe.cq.export.json.ComponentExporter;
 
 public interface AisleRocket extends ComponentExporter {
 
-    public Number getLimit();
+    public Integer getLimit();
 
 }
