@@ -5,7 +5,6 @@ import {
   MappedComponentProperties,
 } from "@adobe/aem-react-editable-components";
 
-import axios from "axios";
 require("./AisleRocket.scss");
 
 type AisleRocketProps = MappedComponentProperties & {
@@ -17,7 +16,13 @@ export const AisleRocketEditConfig = {
   isEmpty: (props: AisleRocketProps) => !props || !props.limit,
 };
 
+const config = {
+  loadingLabel: "Loading AisleRocket...",
+  errorMessage: "Failed to load AisleRocket.",
+};
+
 const AisleRocket = ({ limit = 5 }: AisleRocketProps) => {
+  const [infoMessage, setInfoMessage] = useState(config.loadingLabel);
   const [isLoading, setIsLoading] = useState(true);
   const [images, setImages] = useState([]);
 
@@ -26,15 +31,15 @@ const AisleRocket = ({ limit = 5 }: AisleRocketProps) => {
       const apiUrl = `https://picsum.photos/v2/list?limit=${limit}`;
 
       try {
-        const response = await axios.get(apiUrl);
-        console.log("Response:", response.data);
-        if (response?.data) {
-          setImages(response.data);
+        const response = await fetch(apiUrl);
+        if (response.ok) {
+          const data = await response.json();
+          console.log("Response:", data);
+          setImages(data);
         }
         setIsLoading(false);
       } catch (error) {
-        console.error("Error fetching data:", error);
-        setIsLoading(false);
+        setInfoMessage(config.errorMessage);
       }
     };
 
@@ -42,9 +47,10 @@ const AisleRocket = ({ limit = 5 }: AisleRocketProps) => {
   }, [limit]);
 
   return (
-    <div className="aisleRocket" data-testId="AisleRocket">
-      {isLoading && <div className="aisleRocket__loading">Loading...</div>}
-      {images &&
+    <div className="aisleRocket" data-testid="AisleRocket">
+      {isLoading ? (
+        <div className="aisleRocket__loading">{infoMessage}</div>
+      ) : (
         images.map((image: any) => (
           <div key={image.id} className="aisleRocket__imageContainer">
             <img
@@ -53,12 +59,13 @@ const AisleRocket = ({ limit = 5 }: AisleRocketProps) => {
               alt={image.author}
             />
           </div>
-        ))}
+        ))
+      )}
     </div>
   );
 };
 
-MapTo("wknd-spa-react/components/aislerocket")(
+export default MapTo("wknd-spa-react/components/aislerocket")(
   AisleRocket,
   AisleRocketEditConfig
 );

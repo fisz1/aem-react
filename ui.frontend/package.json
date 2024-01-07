@@ -10,11 +10,16 @@
     "eject": "react-scripts eject",
     "sync": "aemsync -d -w ../ui.apps/src/main/content"
   },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true
+  },
   "dependencies": {
     "@adobe/aem-react-editable-components": "^1.0.0",
     "@adobe/aem-spa-component-mapping": "^1.0.0",
     "@adobe/aem-spa-page-model-manager": "^1.0.0",
     "axios": "^1.6.2",
+    "nock": "^13.3.0",
     "custom-event-polyfill": "^1.0.7",
     "dompurify": "^2.0.7",
     "history": "^4.10.1",
@@ -40,11 +45,11 @@
     "@types/react-dom": "^18.2.17",
     "aem-clientlib-generator": "^1.5.0",
     "aemsync": "^4.0.0",
-    "babel-jest": "27.3.1",
+    "babel-jest": "^24.9.0",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
+    "jest": "24.9.0",
     "jest-css-modules": "^2.1.0",
-    "jest": "27.3.1",
     "sinon": "^7.5.0"
   },
   "proxy": "http://localhost:4502",
