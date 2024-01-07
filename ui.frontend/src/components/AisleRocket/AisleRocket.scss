@@ -1,9 +1,10 @@
 @import '../../styles/variables';
 
-.dataArt {
+.aisleRocket {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+    background: red;
 
     &__image {
         display: block;

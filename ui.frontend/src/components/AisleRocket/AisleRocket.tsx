@@ -6,18 +6,18 @@ import {
 } from "@adobe/aem-react-editable-components";
 
 import axios from "axios";
-require("./DataArt.scss");
+require("./AisleRocket.scss");
 
-type DataArtProps = MappedComponentProperties & {
+type AisleRocketProps = MappedComponentProperties & {
   limit?: number;
 };
 
-export const DataArtEditConfig = {
-  emptyLabel: "DataArt",
-  isEmpty: (props: DataArtProps) => !props || !props.limit,
+export const AisleRocketEditConfig = {
+  emptyLabel: "AisleRocket",
+  isEmpty: (props: AisleRocketProps) => !props || !props.limit,
 };
 
-const DataArt = ({ limit = 5 }: DataArtProps) => {
+const AisleRocket = ({ limit = 5 }: AisleRocketProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const [images, setImages] = useState([]);
 
@@ -42,13 +42,13 @@ const DataArt = ({ limit = 5 }: DataArtProps) => {
   }, [limit]);
 
   return (
-    <div className="dataArt">
-      {isLoading && <div className="dataArt__loading">Loading...</div>}
+    <div className="aisleRocket">
+      {isLoading && <div className="aisleRocket__loading">Loading...</div>}
       {images &&
         images.map((image: any) => (
-          <div key={image.id} className="dataArt__imageContainer">
+          <div key={image.id} className="aisleRocket__imageContainer">
             <img
-              className="dataArt__image"
+              className="aisleRocket__image"
               src={image.download_url}
               alt={image.author}
             />
@@ -58,4 +58,4 @@ const DataArt = ({ limit = 5 }: DataArtProps) => {
   );
 };
 
-MapTo("wknd-spa-react/components/dataart")(DataArt, DataArtEditConfig);
+MapTo("wknd-spa-react/components/dataart")(AisleRocket, AisleRocketEditConfig);
