@@ -11,6 +11,12 @@ type AisleRocketProps = MappedComponentProperties & {
   limit?: number;
 };
 
+type ApiImage = {
+  id: string;
+  download_url: string;
+  author: string;
+};
+
 export const AisleRocketEditConfig = {
   emptyLabel: "AisleRocket",
   isEmpty: (props: AisleRocketProps) => !props || !props.limit,
@@ -51,7 +57,7 @@ const AisleRocket = ({ limit = 5 }: AisleRocketProps) => {
       {isLoading ? (
         <div className="aisleRocket__loading">{infoMessage}</div>
       ) : (
-        images.map((image: any) => (
+        images.map((image: ApiImage) => (
           <div key={image.id} className="aisleRocket__imageContainer">
             <img
               className="aisleRocket__image"
