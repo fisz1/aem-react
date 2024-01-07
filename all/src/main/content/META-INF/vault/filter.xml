@@ -15,6 +15,6 @@
   ~ limitations under the License.
   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~-->
 <workspaceFilter version="1.0">
-    <filter root="/apps/wknd-spa-react-packages"/>
-    <filter root="/apps/wknd-spa-react-vendor-packages"/>
+    <filter mode="replace" root="/apps/wknd-spa-react-packages"/>
+    <filter mode="replace" root="/apps/wknd-spa-react-vendor-packages"/>
 </workspaceFilter>
