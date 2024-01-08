@@ -32,7 +32,7 @@
                                                 sling:resourceType="granite/ui/components/coral/foundation/form/numberfield"
                                                 fieldDescription="Type number of images to display"
                                                 fieldLabel="Image Limit"
-                                                defaultValue="5"
+                                                value="5"
                                                 name="./limit"/>
                                         </items>
                                     </column>
