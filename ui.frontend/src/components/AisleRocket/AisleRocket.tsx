@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+/*import React, { useEffect, useState } from "react";
 
 import {
   MapTo,
@@ -74,4 +74,4 @@ const AisleRocket = ({ limit = 5 }: AisleRocketProps) => {
 export default MapTo("wknd-spa-react/components/aislerocket")(
   AisleRocket,
   AisleRocketEditConfig
-);
+);*/
